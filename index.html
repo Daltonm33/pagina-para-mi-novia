@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Mi Nila 🌻</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom right, #faec6b, #805719);
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 50px 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    p {
+      font-size: 1.3rem;
+      margin-top: 15px;
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 30px;
+    }
+
+    .gallery img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .love-letter {
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+                font-size: 18px;
+        line-height: 1.8;
+        text-align: justify;
+    }
+
+    .counter {
+      font-size: 2rem;
+      margin: 30px 0;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      font-size: 1rem;
+    }
+
+    .heart {
+      position: fixed;
+      top: -10px;
+      color: red;
+      animation: fall linear forwards;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    button {
+      background: white;
+      color: #ff4b6e;
+      border: none;
+      padding: 15px 25px;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background: pink;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Para Ti, Mi Negra 🌻</h1>
+   <section class="love-letter">
+  <p>
+    Desde que llegaste, todo en mi vida tiene un brillo distinto.  
+    Hay algo en ti que transforma mis días, que convierte cualquier momento simple en algo especial  
+    y que hace más bonito incluso lo más difícil.  
+    Eres esa calma que necesito, esa sonrisa que cambia mi mundo y esa presencia que hace que todo valga más.  
+    Porque contigo, hasta los días más pesados se sienten ligeros…  
+    y al final, como dicen, si el día se pone feo, tú me lo haces bonito.
+  </p>
+</section>
+
+  </header>
+
+  <section class="counter">
+    <p>Llevamos juntos:</p>
+    <div id="daysTogether"></div>
+  </section>
+
+  <section class="gallery">
+
+    <img src="foto1.jpg" alt="Nosotros 1">
+    <img src="foto2.jpg" alt="Nosotros 2">
+    <img src="foto3.jpg" alt="Nosotros 3">
+  </section>
+
+  <section class="love-letter">
+    <center>
+        <h2>Mi Carta Para Ti </h2> 
+    </center>
+    
+    <p>
+      Mi amor,
+
+Nuestra historia comenzó en un lugar tan cotidiano como el colegio, pero quién diría que entre salones, recreos y miradas tímidas iba a encontrar al amor de mi vida. Aún recuerdo aquellos días en los que te empezaste a convertirte en alguien tan especial para mí. Tal vez al principio solo eras esa niña que llamaba mi atención de una manera distinta, pero con el paso del tiempo descubrí que contigo todo se sentía diferente, más bonito, más real.
+
+Entre conversaciones, risas y pequeños momentos compartidos, fui conociendo a la persona maravillosa que eres. Poco a poco te convertiste en mi pensamiento favorito, en la razón de muchas sonrisas y en esa persona con la que quería pasar cada vez más tiempo. Fue en aquel lugar en medio de días normales donde comenzó la historia más importante de mi vida.
+
+Desde el momento en que decidimos estar juntos, mi mundo cambio por completo. Han pasado ya tres años maravillosos, tres años llenos de recuerdos que guardo como los tesoros más valiosos de mi corazón. Tres años en los que hemos crecido, aprendido y vivido tantas cosas hermosas que a veces me cuesta creer lo afortunado que soy de tenerte. Hemos compartido momentos felices, sueños, abrazos inolvidables y también esos pequeños instantes que para otros podrían parecer simples pero que contigo significan todo.
+
+Cada día a tu lado ha sido una aventura. Desde nuestras conversaciones más sencillas hasta nuestros momentos más especiales, todo contigo tiene un brillo único. Me enseñaste que el amor verdadero no solo está en los grandes detalles, sino también en la compañía, en el apoyo, en las sonrisas inesperadas y en esa "paz" que siento cuando estoy contigo. 
+
+Y si hay un recuerdo que siempre llevaré en mi corazón, fue cuando te llevaste esa gatita que yo quería con mi alma. Aunque para mí era algo muy especial y la quería profundamente, verte feliz con ella hizo que todo valiera la pena. Sé cuánto significaba para ti, cuánto la querías y cuánto amor tenías para darle. Ver tu emoción, tu sonrisa sincera y esa felicidad tan pura en tus ojos, fue uno de los momentos más hermosos para mí. Porque en ese instante entendí aun más que una de mis mayores alegrías siempre será verte feliz.
+    
+</p>
+  </section>
+
+  <footer>
+    Hecho con mucho amor para ti mi negra
+  </footer>
+
+  <!-- Música -->
+  <audio id="song" src="cancion.mp3"></audio>
+
+  <script>
+    // Fecha en la que comenzaron
+    const startDate = new Date("2023-05-05");
+    const today = new Date();
+
+    const difference = today - startDate;
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+
+    document.getElementById("daysTogether").innerText = days + " días ❤️";
+
+    function playMusic() {
+      document.getElementById("song").play();
+    }
+
+    // girasoles cayendo
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = "🌻";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+      heart.style.fontSize = Math.random() * 20 + 10 + "px";
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 5000);
+    }
+
+    setInterval(createHeart, 300);
+  </script>
+
+</body>
+</html>
